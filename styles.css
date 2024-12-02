@@ -17,7 +17,7 @@ body {
     position: relative;
 }
 
-/* Custom Theme with New Palette */
+/* Softer Theme with Subtle Separation */
 .theme-custom {
     background: linear-gradient(135deg, #f1efe6 0%, #f1efe6 100%);
 }
@@ -27,18 +27,16 @@ body {
 }
 
 .theme-custom .course-card {
-    background: rgba(241, 239, 230, 0.7);
-    border: 1px solid #00183C;
-    box-shadow: 0 4px 15px -1px rgba(0, 24, 60, 0.3);
+    background: rgba(255, 255, 255, 0.7);  /* Lighter background */
+    border: 1px solid rgba(0, 24, 60, 0.1);  /* Softer border */
+    box-shadow: 0 4px 10px -2px rgba(0, 24, 60, 0.1);  /* Lighter shadow */
 }
 
 .theme-custom .course-card:hover {
-    border-color: #00183C;
+    border-color: rgba(0, 24, 60, 0.2);
 }
 
-.theme-custom .course-card h2 {
-    color: #00183C;
-}
+/* Rest of the existing styles remain the same... */
 
 /* Common Styles with Refined Visual Interest */
 h1 {
