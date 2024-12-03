@@ -19,7 +19,7 @@ body {
 
 /* Softer Theme with Subtle Separation */
 .theme-custom {
-    background: linear-gradient(135deg, #f1efe6 0%, #f1efe6 100%);
+    background: linear-gradient(135deg, rgba(232, 228, 222, 0.37) 0%, #f1efe6 100%);
 }
 
 .theme-custom h1 {
@@ -35,8 +35,6 @@ body {
 .theme-custom .course-card:hover {
     border-color: rgba(0, 24, 60, 0.2);
 }
-
-/* Rest of the existing styles remain the same... */
 
 /* Common Styles with Refined Visual Interest */
 h1 {
@@ -156,4 +154,65 @@ h1::after {
     .course-card {
         padding: 1.5rem;
     }
+}
+
+.logo {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-family: 'ClashDisplay', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2A4365;
+}
+
+.email-signup, .faq {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.email-signup form {
+    display: flex;
+    max-width: 400px;
+    margin: 1rem auto;
+    gap: 1rem;
+}
+
+.email-signup input {
+    flex-grow: 1;
+    padding: 0.75rem;
+    border: 1px solid rgba(45, 55, 72, 0.2);
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+}
+
+.email-signup button {
+    padding: 0.75rem 1.5rem;
+    background-color: #2A4365;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.email-signup button:hover {
+    background-color: #1A365D;
+}
+
+.faq-item {
+    margin-bottom: 1.5rem;
+    text-align: left;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.faq-item h3 {
+    color: #2D3748;
+    margin-bottom: 0.5rem;
+}
+
+.faq-item p {
+    color: #4A5568;
 }
