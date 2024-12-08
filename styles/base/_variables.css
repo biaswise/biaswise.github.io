@@ -1,0 +1,23 @@
+:root {
+    /* Colors */
+    --primary-blue: #00183C;
+    --primary-dark-blue: #2A4365;
+    --text-gray: #4A5568;
+    --border-blue: rgba(0, 24, 60, 0.1);
+    --border-blue-hover: rgba(0, 24, 60, 0.2);
+    --bg-gradient-start: rgba(232, 228, 222, 0.37);
+    --bg-gradient-end: #f1efe6;
+
+    /* Layout */
+    --max-width: 1200px;
+    --section-spacing: 5rem;
+    --component-spacing: 2rem;
+    --header-height: 70px;
+
+    /* Border Radius */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+
+    /* Transitions */
+    --transition-base: 0.3s ease;
+}
