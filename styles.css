@@ -1,42 +1,87 @@
+/* Variables */
+:root {
+    --primary-blue: #00183C;
+    --primary-dark-blue: #2A4365;
+    --text-gray: #4A5568;
+    --border-blue: rgba(0, 24, 60, 0.1);
+    --border-blue-hover: rgba(0, 24, 60, 0.2);
+    --bg-gradient-start: rgba(232, 228, 222, 0.37);
+    --bg-gradient-end: #f1efe6;
+    --max-width: 1200px;
+    --section-spacing: 5rem;
+    --component-spacing: 2rem;
+}
+
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    line-height: 1.6;
-    padding: 2rem;
+/* Base Styles */
+html, body {
     min-height: 100vh;
 }
 
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+}
+
+/* Layout */
 .container {
-    max-width: 1200px;
+    width: min(var(--max-width), 100% - 4rem);
     margin: 0 auto;
-    position: relative;
+    padding: var(--component-spacing) 0;
 }
 
-/* Softer Theme with Subtle Separation */
-.theme-custom {
-    background: linear-gradient(135deg, rgba(232, 228, 222, 0.37) 0%, #f1efe6 100%);
+/* Header */
+.main-header {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-blue);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-.theme-custom h1 {
-    color: #00183C;
+.header-content {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.theme-custom .course-card {
-    background: rgba(255, 255, 255, 0.7);  /* Lighter background */
-    border: 1px solid rgba(0, 24, 60, 0.1);  /* Softer border */
-    box-shadow: 0 4px 10px -2px rgba(0, 24, 60, 0.1);  /* Lighter shadow */
+.logo {
+    font-family: 'ClashDisplay', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-dark-blue);
+    text-decoration: none;
 }
 
-.theme-custom .course-card:hover {
-    border-color: rgba(0, 24, 60, 0.2);
+.main-nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
 }
 
-/* Common Styles with Refined Visual Interest */
+.main-nav a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: var(--primary-dark-blue);
+}
+
+/* Main Content Styles */
 h1 {
     text-align: center;
     font-size: 2.5rem;
@@ -44,7 +89,7 @@ h1 {
     margin-bottom: 3rem;
     letter-spacing: -0.5px;
     position: relative;
-    color: #00183C;
+    color: var(--primary-blue);
 }
 
 h1::after {
@@ -55,18 +100,29 @@ h1::after {
     transform: translateX(-50%);
     width: 60px;
     height: 2px;
-    background: rgba(0, 24, 60, 0.2);
+    background: var(--border-blue-hover);
 }
 
+/* Intro Section */
+.intro {
+    max-width: 800px;
+    margin: 0 auto var(--section-spacing);
+    text-align: center;
+    padding: 0 1rem;
+}
+
+/* Course Grid */
 .course-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: var(--component-spacing);
     padding: 1rem;
-    position: relative;
+    margin-bottom: var(--section-spacing);
 }
 
 .course-card {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid var(--border-blue);
     border-radius: 12px;
     padding: 2rem;
     transition: all 0.3s ease;
@@ -74,10 +130,12 @@ h1::after {
     position: relative;
     overflow: hidden;
     backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px -2px var(--border-blue);
 }
 
 .course-card:hover {
     transform: translateY(-5px);
+    border-color: var(--border-blue-hover);
 }
 
 .course-card h2 {
@@ -96,41 +154,16 @@ h1::after {
     transform: translateY(-50%);
     width: 3px;
     height: 1.25rem;
-    background: rgba(0, 24, 60, 0.2);
+    background: var(--border-blue-hover);
     border-radius: 2px;
 }
 
 .course-card p {
-    color: #00183C;
+    color: var(--primary-blue);
     font-size: 0.95rem;
     line-height: 1.6;
     position: relative;
     padding-left: 1rem;
-}
-
-/* Subtle grid background */
-.grid-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(rgba(0, 24, 60, .02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 24, 60, .02) 1px, transparent 1px);
-    background-size: 50px 50px;
-    pointer-events: none;
-}
-
-/* Progress indicator */
-.course-card::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: rgba(0, 24, 60, 0.1);
-    border-radius: 0 0 12px 12px;
 }
 
 .lesson-number {
@@ -142,53 +175,62 @@ h1::after {
     font-weight: 500;
 }
 
-@media (max-width: 768px) {
-    .course-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    .course-card {
-        padding: 1.5rem;
-    }
-}
-
-.logo {
+.course-card::after {
+    content: '';
     position: absolute;
-    top: 1rem;
-    left: 1rem;
-    font-family: 'ClashDisplay', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #2A4365;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--border-blue);
+    border-radius: 0 0 12px 12px;
 }
 
-.email-signup, .faq {
-    margin-top: 3rem;
+/* Background Grid */
+.grid-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+            linear-gradient(rgba(0, 24, 60, .02) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(0, 24, 60, .02) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Email Signup */
+.email-signup {
     text-align: center;
+    max-width: 600px;
+    margin: 0 auto var(--section-spacing);
+    padding: 0 1rem;
+}
+
+.email-signup h2 {
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
 }
 
 .email-signup form {
     display: flex;
-    max-width: 400px;
-    margin: 1rem auto;
     gap: 1rem;
+    margin-top: var(--component-spacing);
 }
 
 .email-signup input {
     flex-grow: 1;
     padding: 0.75rem;
-    border: 1px solid rgba(45, 55, 72, 0.2);
+    border: 1px solid var(--border-blue);
     border-radius: 8px;
-    font-family: 'Inter', sans-serif;
+    font-family: inherit;
 }
 
 .email-signup button {
     padding: 0.75rem 1.5rem;
-    background-color: #2A4365;
+    background-color: var(--primary-dark-blue);
     color: white;
     border: none;
     border-radius: 8px;
@@ -200,19 +242,114 @@ h1::after {
     background-color: #1A365D;
 }
 
-.faq-item {
-    margin-bottom: 1.5rem;
-    text-align: left;
+/* FAQ Section */
+.faq {
     max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto var(--section-spacing);
+    padding: 0 1rem;
 }
 
-.faq-item h3 {
-    color: #2D3748;
-    margin-bottom: 0.5rem;
+.faq h2 {
+    text-align: center;
+    color: var(--primary-blue);
+    margin-bottom: var(--component-spacing);
 }
 
-.faq-item p {
-    color: #4A5568;
+.faq-item {
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-blue);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq-item summary {
+    padding: 1rem;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.7);
+    font-weight: 600;
+    color: var(--primary-blue);
+    list-style: none;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.faq-item summary:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.faq-item summary::after {
+    content: '+';
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+.faq-item[open] summary::after {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.faq-content {
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.faq-content p {
+    color: var(--text-gray);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    :root {
+        --section-spacing: 3rem;
+        --component-spacing: 1.5rem;
+    }
+
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .main-nav ul {
+        gap: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .email-signup form {
+        flex-direction: column;
+    }
+
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .course-card {
+        padding: 1.5rem;
+    }
+}
+
+/* Smooth Scroll Behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Print Styles */
+@media print {
+    .grid-background {
+        display: none;
+    }
+
+    .course-card {
+        break-inside: avoid;
+        box-shadow: none;
+    }
+
+    .main-header {
+        position: static;
+    }
 }

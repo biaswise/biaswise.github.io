@@ -3,38 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about cognitive biases and critical thinking skills with BiasWise">
     <title>BiasWise - Cognitive Bias Training</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="theme-custom">
 <div class="grid-background"></div>
-<div class="container">
-    <div class="logo">BiasWise</div>
 
+<header class="main-header">
+    <div class="header-content">
+        <a href="/" class="logo">BiasWise</a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#courses">Lessons</a></li>
+                <li><a href="#signup">Subscribe</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
     <h1>Cognitive Biases. Learn. Practice. Recognise.</h1>
 
-
     <div class="intro">
-        <p>Cognitive biases are systematic patterns of deviation from rationality in judgment and decision-making. They can significantly impact our thinking, leading to poor choices in personal and professional contexts. By recognizing and understanding these biases, we can improve critical thinking skills, make more objective decisions, and enhance problem-solving abilities.</p>
+        <p>Cognitive biases are systematic patterns of deviation from rationality
+            in judgment and decision-making. They can significantly impact our
+            thinking, leading to poor choices in personal and professional contexts.
+            By recognizing and understanding these biases, we can improve critical
+            thinking skills, make more objective decisions, and enhance
+            problem-solving abilities.</p>
     </div>
 
-    <div class="course-grid">
+    <section id="courses" class="course-grid">
         <div class="course-card">
             <span class="lesson-number">01</span>
             <h2>Understanding Cognitive Bias Foundations</h2>
-            <p>Explore the fundamental concepts and origins of cognitive biases in human thinking</p>
+            <p>Explore the fundamental concepts and origins of cognitive biases in
+                human thinking</p>
         </div>
-
         <div class="course-card">
             <span class="lesson-number">02</span>
             <h2>Common Cognitive Bias Types</h2>
-            <p>Identify and recognize the most prevalent cognitive biases that affect decision-making</p>
+            <p>Identify and recognize the most prevalent cognitive biases that affect
+                decision-making</p>
         </div>
 
         <div class="course-card">
             <span class="lesson-number">03</span>
             <h2>Practical Bias Recognition</h2>
-            <p>Learn techniques to detect and mitigate cognitive biases in real-world scenarios</p>
+            <p>Learn techniques to detect and mitigate cognitive biases in real-world
+                scenarios</p>
         </div>
 
         <div class="course-card">
@@ -52,40 +72,64 @@
         <div class="course-card">
             <span class="lesson-number">06</span>
             <h2>Applying Bias Knowledge</h2>
-            <p>Practical applications of cognitive bias understanding in professional settings</p>
+            <p>Practical applications of cognitive bias understanding in professional
+                settings</p>
         </div>
-    </div>
+    </section>
 
-    <div class="email-signup">
+    <section id="signup" class="email-signup">
         <h2>Stay Updated</h2>
         <p>Join our mailing list to learn more about cognitive bias training</p>
-        <form>
+        <form action="/subscribe" method="POST">
             <input type="email" placeholder="Enter your email" required>
             <button type="submit">Subscribe</button>
         </form>
-    </div>
+    </section>
 
-    <div class="faq">
+    <section id="faq" class="faq">
         <h2>Frequently Asked Questions</h2>
-        <div class="faq-item">
-            <h3>What are cognitive biases?</h3>
-            <p>Cognitive biases are systematic errors in thinking that affect our judgments and decisions.</p>
+        <div class="faq-list">
+            <details class="faq-item">
+                <summary>What are cognitive biases?</summary>
+                <div class="faq-content">
+                    <p>Cognitive biases are systematic errors in thinking that affect our
+                        judgments and decisions.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Why should I learn about cognitive biases?</summary>
+                <div class="faq-content">
+                    <p>Understanding biases helps improve critical thinking, decision-making,
+                        and self-awareness.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Are cognitive biases always harmful?</summary>
+                <div class="faq-content">
+                    <p>While often problematic, some biases can serve protective or efficient
+                        cognitive functions.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Can cognitive biases be overcome?</summary>
+                <div class="faq-content">
+                    <p>With awareness, training, and deliberate practice, we can mitigate the
+                        impact of cognitive biases.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>How long does it take to learn about cognitive biases?</summary>
+                <div class="faq-content">
+                    <p>Our courses provide foundational knowledge, but continuous learning is
+                        key to mastery.</p>
+                </div>
+            </details>
         </div>
-        <div class="faq-item">
-            <h3>Why should I learn about cognitive biases?</h3>
-            <p>Understanding biases helps improve critical thinking, decision-making, and self-awareness.</p>
-        </div>
-        <div class="faq-item">
-            <h3>Are cognitive biases always harmful?</h3>
-            <p>While often problematic, some biases can serve protective or efficient cognitive functions.</p>
-        </div>
-        <div class="faq-item">
-            <h3>Can cognitive biases be overcome?</h3>
-            <p>With awareness, training, and deliberate practice, we can mitigate the impact of cognitive biases.</p>
-        </div>
-        <div class="faq-item">
-            <h3>How long does it take to learn about cognitive biases?</h3>
-            <p>Our courses provide foundational knowledge, but continuous learning is key to mastery.</p>
-        </div>
-    </div>
-</div>
+    </section>
+</main>
+</body>
+</html>
