@@ -118,8 +118,8 @@ function renderLessonContent(lessonData, part, pageNumber) {
     
     // Only display title and subtitle on the first page
     const titleHTML = pageNumber === 1 ? 
-        `<h1>${part.title}</h1>
-        <h2 class="lesson-subtitle">${part.subtitle}</h2>` : '';
+        `<h2>${part.title}</h2>
+        <h3 class="lesson-subtitle">${part.subtitle}</h3>` : '';
     
     contentElement.innerHTML = `
         ${titleHTML}

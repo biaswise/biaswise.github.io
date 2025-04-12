@@ -75,6 +75,7 @@
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
+    font-size: 0.95rem;
 }
 
 .lesson-content::after {
@@ -88,16 +89,27 @@
     border-radius: 0 0 12px 12px;
 }
 
-.lesson-content h1 {
+.lesson-content h2 {
     text-align: left;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.8rem;
 }
 
-.lesson-content h1::after {
+.lesson-content h2::after {
+    content: '';
+    position: absolute;
     left: 0;
-    transform: none;
+    bottom: 0;
     width: 60px;
+    height: 3px;
+    background-color: var(--primary-blue);
+    border-radius: 2px;
+}
+
+.lesson-content p {
+    margin-bottom: 1.5rem;
 }
 
 .lesson-subtitle {
@@ -209,10 +221,11 @@
 @media (max-width: 768px) {
     .lesson-content {
         padding: 2rem 1.5rem;
+        font-size: 0.9rem;
     }
     
-    .lesson-content h1 {
-        font-size: 2rem;
+    .lesson-content h2 {
+        font-size: 1.5rem;
     }
     
     .lesson-subtitle {
@@ -222,6 +235,7 @@
     .lesson-navigation {
         flex-direction: row;
         justify-content: space-between;
+        padding: 0 1rem;
     }
     
     .nav-button {
@@ -231,9 +245,14 @@
     }
     
     .lesson-title-bar {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .lesson-part {
+        text-align: right;
     }
     
     .back-link {
