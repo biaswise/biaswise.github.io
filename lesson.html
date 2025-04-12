@@ -28,66 +28,31 @@
 <main class="container">
     <div class="lesson-header">
         <a href="index.html#courses" class="back-link">← Back to lessons</a>
-        <span class="lesson-number">01</span>
+        <span class="lesson-number" id="lesson-number"></span>
     </div>
     
     <div class="lesson-progress-container">
         <div class="lesson-title-bar">
-            <h2 class="lesson-title">Empathy Gap</h2>
-            <span class="lesson-part">Part 1 of 4</span>
+            <h2 class="lesson-title" id="lesson-title"></h2>
+            <span class="lesson-part" id="lesson-part"></span>
         </div>
         <div class="progress-bar">
-            <div class="progress" style="width: 25%"></div>
+            <div class="progress" id="progress-bar"></div>
         </div>
     </div>
 
-    <div class="lesson-content">
-        <h1>Empathy Gap</h1>
-        <h2 class="lesson-subtitle">When Your Present Self Betrays Your Future Self</h2>
-        
-        <div class="lesson-intro">
-            <p>The empathy gap is a cognitive bias that causes people to underestimate the influence of visceral states (hunger, thirst, sexual arousal, drug cravings, etc.) on their behavior or preferences.</p>
-        </div>
-
-        <section class="lesson-section">
-            <h3>Understanding the Empathy Gap</h3>
-            <p>When we're in a "cold" state (not experiencing strong emotions or physical sensations), we have trouble predicting how we'll behave in a "hot" state (when experiencing those emotions or sensations).</p>
-            <p>Similarly, when we're in a hot state, we struggle to understand how we feel and make decisions when we're in a cold state.</p>
-        </section>
-
-        <section class="lesson-section">
-            <h3>Real-World Examples</h3>
-            <ul class="lesson-list">
-                <li>Shopping while hungry leads to buying more food than needed</li>
-                <li>Making promises when calm that are difficult to keep when stressed</li>
-                <li>Underestimating pain or discomfort when planning medical procedures</li>
-                <li>Setting unrealistic fitness goals when motivated that become difficult to maintain</li>
-            </ul>
-        </section>
-
-        <section class="lesson-section">
-            <h3>How to Counter This Bias</h3>
-            <p>Being aware of the empathy gap is the first step to countering it. Here are some strategies:</p>
-            <ol class="lesson-list">
-                <li>Practice "pre-commitment" strategies for your future self</li>
-                <li>Create decision rules when in a cold state to follow during hot states</li>
-                <li>Seek outside perspectives that aren't influenced by your current state</li>
-                <li>Document how you feel in different states to build self-awareness</li>
-            </ol>
-        </section>
-
-        <div class="lesson-exercise">
-            <h3>Exercise</h3>
-            <p>Think about a recent decision you made in a "hot" emotional state. How might your decision have been different if you were in a "cold" state? Write down strategies you could use next time to account for this empathy gap.</p>
-        </div>
+    <div class="lesson-content" id="lesson-content">
+        <!-- Lesson content will be dynamically inserted here -->
     </div>
 </main>
 
 <footer class="lesson-footer">
     <div class="lesson-navigation">
-        <a href="#" class="nav-button disabled">← Introduction</a>
-        <a href="#" class="nav-button">Practical Applications →</a>
+        <a href="#" class="nav-button" id="prev-button"></a>
+        <a href="#" class="nav-button" id="next-button"></a>
     </div>
 </footer>
+
+<script src="lesson.js"></script>
 </body>
 </html> 
