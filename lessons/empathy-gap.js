@@ -8,8 +8,8 @@ window.lesson_empathy_gap = {
             title: "Empathy Gap",
             subtitle: "When Your Present Self Betrays Your Future Self",
             partNumber: 1,
-            prevButton: { text: "← Introduction", disabled: true, url: "#" },
-            nextButton: { text: "Practical Applications →", disabled: false, url: "?lesson=empathy-gap&part=part2" },
+            prevButton: { text: "← Back", disabled: true, url: "#" },
+            nextButton: { text: "Part 2 →", disabled: false, url: "?lesson=empathy-gap&part=part2" },
             content: `
                 <div class="lesson-intro">
                     <p>The empathy gap is a cognitive bias that causes people to underestimate the influence of visceral states (hunger, thirst, sexual arousal, drug cravings, etc.) on their behavior or preferences.</p>
@@ -53,8 +53,8 @@ window.lesson_empathy_gap = {
             title: "Practical Applications",
             subtitle: "Applying Empathy Gap Knowledge in Real Life",
             partNumber: 2,
-            prevButton: { text: "← Basic Concepts", disabled: false, url: "?lesson=empathy-gap&part=part1" },
-            nextButton: { text: "Case Studies →", disabled: false, url: "?lesson=empathy-gap&part=part3" },
+            prevButton: { text: "← Back", disabled: false, url: "?lesson=empathy-gap&part=part1" },
+            nextButton: { text: "Part 3 →", disabled: false, url: "?lesson=empathy-gap&part=part3" },
             content: `
                 <div class="lesson-intro">
                     <p>Now that we understand what the empathy gap is, let's explore how this knowledge can be applied in various aspects of our daily lives to make better decisions.</p>
@@ -104,8 +104,8 @@ window.lesson_empathy_gap = {
             title: "Case Studies",
             subtitle: "Real-World Examples of the Empathy Gap",
             partNumber: 3,
-            prevButton: { text: "← Practical Applications", disabled: false, url: "?lesson=empathy-gap&part=part2" },
-            nextButton: { text: "Summary & Conclusion →", disabled: false, url: "?lesson=empathy-gap&part=part4" },
+            prevButton: { text: "← Back", disabled: false, url: "?lesson=empathy-gap&part=part2" },
+            nextButton: { text: "Part 4 →", disabled: false, url: "?lesson=empathy-gap&part=part4" },
             content: `
                 <div class="lesson-intro">
                     <p>In this section, we'll examine real-world case studies that illustrate the empathy gap and its consequences across different contexts.</p>
@@ -140,8 +140,8 @@ window.lesson_empathy_gap = {
             title: "Summary & Conclusion",
             subtitle: "Mastering the Empathy Gap in Daily Life",
             partNumber: 4,
-            prevButton: { text: "← Case Studies", disabled: false, url: "?lesson=empathy-gap&part=part3" },
-            nextButton: { text: "Next Lesson →", disabled: false, url: "index.html#courses" },
+            prevButton: { text: "← Back", disabled: false, url: "?lesson=empathy-gap&part=part3" },
+            nextButton: { text: "Finish", disabled: false, url: "index.html#courses" },
             content: `
                 <div class="lesson-intro">
                     <p>As we conclude our exploration of the empathy gap, let's summarize what we've learned and consider how to apply this knowledge consistently in our lives.</p>

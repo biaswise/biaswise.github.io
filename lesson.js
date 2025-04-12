@@ -103,4 +103,18 @@ function renderLessonContent(lessonData, part) {
 }
 
 // Initialize the page when DOM is ready
-document.addEventListener('DOMContentLoaded', loadLessonContent); 
+document.addEventListener('DOMContentLoaded', function() {
+    // Load lesson content
+    loadLessonContent();
+    
+    // Mobile menu functionality
+    const mobileMenuButton = document.querySelector('.mobile-menu-button');
+    const mainNav = document.querySelector('.main-nav');
+    
+    if (mobileMenuButton) {
+        mobileMenuButton.addEventListener('click', function() {
+            mainNav.classList.toggle('open');
+            mobileMenuButton.classList.toggle('open');
+        });
+    }
+}); 
