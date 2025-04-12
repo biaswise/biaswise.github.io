@@ -1,24 +1,9 @@
 /* Lesson Page Styles */
 .lesson-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     margin-bottom: 1rem;
-}
-
-.back-link {
-    color: var(--primary-blue);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    font-size: 0.9rem;
-    opacity: 0.8;
-}
-
-.back-link:hover {
-    color: var(--primary-dark-blue);
 }
 
 /* Progress bar and lesson title styles */
@@ -174,7 +159,7 @@
 
 .lesson-footer {
     max-width: 900px;
-    margin: 0 auto 3rem;
+    margin: -3rem auto 3rem;
 }
 
 .lesson-navigation {
@@ -193,8 +178,16 @@
     transition: all 0.3s ease;
 }
 
+#next-button {
+    background: var(--primary-dark-blue);
+    color: white;
+}
+
+#next-button:hover {
+    background: #1A365D;
+}
+
 .nav-button:hover {
-    background: rgba(255, 255, 255, 0.9);
     border-color: var(--border-blue-hover);
 }
 
