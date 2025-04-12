@@ -133,7 +133,7 @@ h1::after {
     box-shadow: 0 4px 10px -2px var(--border-blue);
 }
 
-.course-card:hover {
+.course-card:not(.course-card-link .course-card):hover {
     transform: translateY(-5px);
     border-color: var(--border-blue-hover);
 }
@@ -352,4 +352,15 @@ html {
     .main-header {
         position: static;
     }
+}
+
+.course-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.course-card-link:hover .course-card {
+    transform: translateY(-5px);
+    border-color: var(--border-blue-hover);
 }
