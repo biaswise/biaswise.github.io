@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Learn about cognitive biases and critical thinking skills with BiasWise">
     <title>BiasWise - Cognitive Bias Training</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="theme-custom">
@@ -21,6 +21,11 @@
                 <li><a href="#faq">FAQ</a></li>
             </ul>
         </nav>
+        <button class="mobile-menu-button" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </div>
 </header>
 
@@ -37,17 +42,17 @@
     </div>
 
     <section id="courses" class="course-grid">
-        <div class="course-card">
-            <span class="lesson-number">01</span>
-            <h2>Understanding Cognitive Bias Foundations</h2>
-            <p>Explore the fundamental concepts and origins of cognitive biases in
-                human thinking</p>
-        </div>
+        <a href="lesson.html?lesson=empathy-gap&part=part1" class="course-card-link">
+            <div class="course-card">
+                <span class="lesson-number">01</span>
+                <h2>Empathy Gap</h2>
+                <p>When Your Present Self Betrays Your Future Self.</p>
+            </div>
+        </a>
         <div class="course-card">
             <span class="lesson-number">02</span>
-            <h2>Common Cognitive Bias Types</h2>
-            <p>Identify and recognize the most prevalent cognitive biases that affect
-                decision-making</p>
+            <h2>Common Cognitive Bias</h2>
+            <p>Identify and recognize the most prevalent cognitive biases</p>
         </div>
 
         <div class="course-card">
@@ -131,5 +136,26 @@
         </div>
     </section>
 </main>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuButton = document.querySelector('.mobile-menu-button');
+        const nav = document.querySelector('.main-nav');
+        
+        menuButton.addEventListener('click', function() {
+            menuButton.classList.toggle('open');
+            nav.classList.toggle('open');
+        });
+        
+        // Close menu when a navigation link is clicked
+        const navLinks = document.querySelectorAll('.main-nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                menuButton.classList.remove('open');
+                nav.classList.remove('open');
+            });
+        });
+    });
+</script>
 </body>
 </html>
