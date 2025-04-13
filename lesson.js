@@ -160,5 +160,23 @@ document.addEventListener('DOMContentLoaded', function() {
             mainNav.classList.toggle('open');
             mobileMenuButton.classList.toggle('open');
         });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.main-nav') && 
+                !event.target.closest('.mobile-menu-button') &&
+                mainNav.classList.contains('open')) {
+                mainNav.classList.remove('open');
+                mobileMenuButton.classList.remove('open');
+            }
+        });
+        
+        // Close menu when pressing escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && mainNav.classList.contains('open')) {
+                mainNav.classList.remove('open');
+                mobileMenuButton.classList.remove('open');
+            }
+        });
     }
 }); 
