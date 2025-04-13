@@ -40,16 +40,81 @@ window.lesson_empathy_gap = {
         },
         {
             id: "part2",
-            title: "Practical Applications",
-            subtitle: "Applying Empathy Gap Knowledge in Real Life",
+            title: "Part 2: Understanding Your Empathy Gap",
             partNumber: 2,
             prevButton: { text: "← Part 1", disabled: false, url: "?lesson=empathy-gap&part=part1&page=2" },
             nextButton: { text: "Part 3 →", disabled: false, url: "?lesson=empathy-gap&part=part3" },
-            content: `
-                <div class="lesson-intro">
-                    <p> Some placeholder text.</p>
-                </div>
-            `
+            pages: [
+                {
+                    pageNumber: 1,
+                    content: `
+                        <section class="lesson-section">
+                            <p>Before we dive deeper, let's personalize this lesson to make it more relevant to your own experiences. The empathy gap affects us all, but it often shows up most clearly in specific areas of our lives.</p>
+                            
+                            <div class="lesson-question" id="empathy-gap-question">
+                                <p><strong>Which of these areas do you find most challenging to maintain consistently, despite your best intentions?</strong></p>
+                                <form class="single-choice-question">
+                                    <div class="option">
+                                        <input type="radio" id="diet" name="challenge-area" value="diet" data-target="diet-content">
+                                        <label for="diet">Following a healthy diet consistently</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" id="exercise" name="challenge-area" value="exercise" data-target="exercise-content">
+                                        <label for="exercise">Exercising regularly</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" id="projects" name="challenge-area" value="projects" data-target="projects-content">
+                                        <label for="projects">Completing side projects or personal creative work</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" id="saving" name="challenge-area" value="saving" data-target="saving-content">
+                                        <label for="saving">Saving money instead of impulse spending</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" id="sleep" name="challenge-area" value="sleep" data-target="sleep-content">
+                                        <label for="sleep">Sticking to a bedtime routine for better sleep</label>
+                                    </div>
+                                </form>
+                                <p></p>
+                                <p>Choose the option that resonates most with your experience—the area where you often make plans with good intentions but struggle to follow through when the moment arrives.</p>
+                            </div>
+                        </section>
+                    `
+                },
+                {
+                    pageNumber: 2,
+                    content: `
+                       <section class="lesson-section">
+                            <div id="diet-content" class="dynamic-content" data-option="diet" data-group="empathy-gap-question">
+                                <h3>Following a healthy diet consistently</h3>
+                                <p>Think about walking through a grocery store on a full stomach. The fresh produce section beckons, and you confidently fill your cart with vegetables for the week ahead. Your mind conjures images of colorful salads and nutrient-packed meals. But when Thursday evening arrives and you're exhausted from work, those same vegetables seem far less appealing than ordering takeout. What happened between your optimistic grocery shopping and that tired Thursday evening?</p>
+                                <p>The empathy gap explains this disconnect perfectly. When you're well-fed and energized (a "cold" state), your brain simply cannot fully access how you'll feel when hungry and tired (a "hot" state). This isn't a failure of willpower—it's a fundamental limitation in how our brains process future emotional states.</p>
+                                <p>Research consistently shows that people shopping while hungry buy significantly more high-calorie foods than those shopping after a meal. This isn't because they lack nutritional knowledge, but because their current physiological state blinds them to how differently they'll feel later. The well-fed planner can't truly empathize with the future hungry self who will face those vegetables with depleted decision-making energy..</p>
+                            </div>
+                            
+                            <div id="exercise-content" class="dynamic-content" data-option="exercise" data-group="empathy-gap-question">
+                                <h3>Exercising regularly</h3>
+                                <p>Placeholder text for regular exercise content.</p>
+                            </div>
+                            
+                            <div id="projects-content" class="dynamic-content" data-option="projects" data-group="empathy-gap-question">
+                                <h3>Completing side projects or personal creative work</h3>
+                                <p>Placeholder text for side projects content.</p>
+                            </div>
+                            
+                            <div id="saving-content" class="dynamic-content" data-option="saving" data-group="empathy-gap-question">
+                                <h3>Saving money instead of impulse spending</h3>
+                                <p>Placeholder text for saving money content.</p>
+                            </div>
+                            
+                            <div id="sleep-content" class="dynamic-content" data-option="sleep" data-group="empathy-gap-question">
+                                <h3>Sticking to a bedtime routine for better sleep</h3>
+                                <p>Placeholder text for sleep routine content.</p>
+                            </div>
+                        </section>
+                    `
+                }
+            ],
         },
         {
             id: "part3",
