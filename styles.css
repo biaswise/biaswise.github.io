@@ -336,7 +336,11 @@ h1::after {
         --section-spacing: 3rem;
         --component-spacing: 1.5rem;
     }
-
+    
+    .container {
+        width: min(100% - 2rem, 100%);
+    }
+    
     .header-content {
         padding: 0.5rem 2rem;
     }

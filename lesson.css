@@ -213,8 +213,17 @@
 /* Media Queries */
 @media (max-width: 768px) {
     .lesson-content {
-        padding: 2rem 1.5rem;
+        padding: 2rem 1rem;
         font-size: 0.9rem;
+        max-width: 100%;
+    }
+    
+    .lesson-progress-container {
+        max-width: 100%;
+    }
+    
+    .lesson-footer {
+        max-width: 100%;
     }
     
     .lesson-content h2 {
