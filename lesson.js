@@ -70,8 +70,27 @@ function renderLessonContent(lessonData, part, pageNumber) {
     document.getElementById('lesson-title').textContent = lessonData.lessonTitle;
     document.getElementById('lesson-part').textContent = `Part ${part.partNumber} of ${lessonData.totalParts}`;
     
-    // Update progress bar
-    const progressPercent = (part.partNumber / lessonData.totalParts) * 100;
+    // Calculate total pages and current page across all parts
+    let totalPages = 0;
+    let currentPageOverall = 0;
+    
+    for (let i = 0; i < lessonData.parts.length; i++) {
+        const currentPart = lessonData.parts[i];
+        // If the part has pages, count them
+        const partPageCount = currentPart.pages ? currentPart.pages.length : 1;
+        totalPages += partPageCount;
+        
+        // Count pages before current part
+        if (i < part.partNumber - 1) {
+            currentPageOverall += partPageCount;
+        }
+    }
+    
+    // Add current page number within current part
+    currentPageOverall += pageNumber;
+    
+    // Update progress bar based on pages instead of parts
+    const progressPercent = (currentPageOverall / totalPages) * 100;
     const progressBar = document.getElementById('progress-bar');
     progressBar.style.width = `${progressPercent}%`;
     
