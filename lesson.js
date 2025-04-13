@@ -3,6 +3,11 @@ const lessonRegistry = {
     'empathy-gap': 'lessons/empathy-gap.js'
 };
 
+// JavaScript files for interactions
+const interactionScripts = [
+    'lessons/lesson-interactions.js'
+];
+
 // Get URL parameters to determine which lesson and part to load
 function getUrlParams() {
     const params = new URLSearchParams(window.location.search);
@@ -21,6 +26,9 @@ async function loadLessonContent() {
         // Dynamically import the lesson data
         await loadScript(lessonRegistry[lessonId]);
         
+        // Load interaction scripts
+        await Promise.all(interactionScripts.map(script => loadScript(script)));
+        
         // After script loads, the lesson data should be available
         // The variable name is constructed based on the lesson ID
         const lessonData = window[`lesson_${lessonId.replace(/-/g, '_')}`];
@@ -38,6 +46,9 @@ async function loadLessonContent() {
         
         // Update the page with the lesson content
         renderLessonContent(lessonData, part, pageNumber);
+        
+        // Dispatch event to notify that lesson content has been rendered
+        document.dispatchEvent(new CustomEvent('lessonContentRendered'));
         
     } catch (error) {
         console.error('Error loading lesson content:', error);
@@ -70,8 +81,27 @@ function renderLessonContent(lessonData, part, pageNumber) {
     document.getElementById('lesson-title').textContent = lessonData.lessonTitle;
     document.getElementById('lesson-part').textContent = `Part ${part.partNumber} of ${lessonData.totalParts}`;
     
-    // Update progress bar
-    const progressPercent = (part.partNumber / lessonData.totalParts) * 100;
+    // Calculate total pages and current page across all parts
+    let totalPages = 0;
+    let currentPageOverall = 0;
+    
+    for (let i = 0; i < lessonData.parts.length; i++) {
+        const currentPart = lessonData.parts[i];
+        // If the part has pages, count them
+        const partPageCount = currentPart.pages ? currentPart.pages.length : 1;
+        totalPages += partPageCount;
+        
+        // Count pages before current part
+        if (i < part.partNumber - 1) {
+            currentPageOverall += partPageCount;
+        }
+    }
+    
+    // Add current page number within current part
+    currentPageOverall += pageNumber;
+    
+    // Update progress bar based on pages instead of parts
+    const progressPercent = (currentPageOverall / totalPages) * 100;
     const progressBar = document.getElementById('progress-bar');
     progressBar.style.width = `${progressPercent}%`;
     
