@@ -6,3 +6,4 @@
 - add into part
 - add email fucntionality
 - remove the logic for content to hadle only the pages inside the parts
+- make bulet point shifted compare to the rest of the text

@@ -253,16 +253,90 @@ window.lesson_empathy_gap = {
         {
             id: "part4",
             title: "Part 4: Making it Real - Personal Application Workshop",
-            subtitle: "Mastering the Empathy Gap in Daily Life",
+            subtitle: "Now that you understand the empathy gap and have learned strategies to manage it, let's apply this knowledge to your selected challenge.",
             partNumber: 4,
-            prevButton: { text: "← Back", disabled: false, url: "?lesson=empathy-gap&part=part4" },
+            prevButton: { text: "← Back", disabled: false, url: "?lesson=empathy-gap&part=part3" },
             nextButton: { text: "Part 5 →", disabled: false, url: "?lesson=empathy-gap&part=part5" },
             pages: [
                 {
                     pageNumber: 1,
                     content: `
                         <section class="lesson-section">
-                            <p>TODO.</p>   
+                            <div id="diet-content" class="dynamic-content" data-option="diet" data-group="empathy-gap-question">
+                                <h3>Step 1: Recognize Your Patterns</h3>
+                                <p>Identify when your healthy eating plans typically break down:</p>
+                                <ul>
+                                    <li>Do you grocery shop while hungry?</li>
+                                    <li>Do evening cravings derail your intentions?</li>
+                                    <li>Do stressful workdays lead to comfort eating?</li>
+                                    <li>Do social situations override your dietary plans?</li>
+                                </ul>
+                                <p>Ask yourself: "When I'm planning meals, am I usually satisfied and energized? When I break from my plan, am I typically hungry, tired, or stressed?"</p>
+                            </div>
+                            
+                            <div id="exercise-content" class="dynamic-content" data-option="exercise" data-group="empathy-gap-question">
+                                <h3>Step 1: Recognize Your Patterns</h3>
+                                <p>Identify when your exercise plans typically fall apart:</p>
+                                <ul>
+                                    <li>Are early mornings particularly difficult?</li>
+                                    <li>Do end-of-day workouts get skipped when you're tired?</li>
+                                    <li>Do you overcommit to frequency or intensity?</li>
+                                    <li>Do weather changes derail your routine?</li>
+                                </ul>
+                                <p>Ask yourself: "When planning workouts, am I usually rested and motivated? When skipping them, am I typically exhausted, busy, or comfortable?"</p>
+                            </div>  
+
+                            <div id="projects-content" class="dynamic-content" data-option="projects" data-group="empathy-gap-question">
+                                <h3>Step 1: Recognize Your Patterns</h3>
+                                <p>Identify when your creative work typically stalls:</p>
+                                <ul>
+                                    <li>Do you start strong but fade after the initial excitement?</li>
+                                    <li>Do you get overwhelmed by scope or complexity?</li>
+                                    <li>Do evening hours find you too mentally drained?</li>
+                                    <li>Do other responsibilities consistently take priority?</li>
+                                </ul>
+                                <p>Ask yourself: "When planning my project, am I inspired and optimistic? When avoiding the work, am I typically depleted, distracted, or intimidated?"</p>
+                            </div>
+                            
+                            <div id="saving-content" class="dynamic-content" data-option="saving" data-group="empathy-gap-question">
+                                <h3>Step 1: Recognize Your Patterns</h3>
+                                <p>Identify when your financial plans typically get derailed:</p>
+                                <ul>
+                                    <li>Do emotional states trigger spending (stress, boredom, celebration)?</li>
+                                    <li>Do social situations lead to unplanned purchases?</li>
+                                    <li>Do particular websites or stores weaken your resolve?</li>
+                                    <li>Does payday create a temporary feeling of abundance?</li>
+                                </ul>
+                                <p>Ask yourself: "When making budgets, am I typically rational and future-focused? When overspending, am I emotionally driven or socially influenced?"</p>
+                            </div>
+                            
+                            <div id="sleep-content" class="dynamic-content" data-option="sleep" data-group="empathy-gap-question">
+                                <h3>Step 1: Recognize Your Patterns</h3>
+                                <p>Identify when your sleep routine typically breaks down:</p>
+                                <ul>
+                                    <li>Do you get caught in "just one more" cycles with media?</li>
+                                    <li>Does evening productivity give a second wind?</li>
+                                    <li>Do social interactions or obligations push bedtime later?</li>
+                                    <li>Does stress or anxiety make you avoid sleep?</li>
+                                </ul>
+                                <p>Ask yourself: "When planning my bedtime, am I tired and valuing rest? When staying up late, am I engaged, stimulated, or avoiding something?"</p>
+                            </div>
+                        </section>
+                    `
+                },
+                {
+                    pageNumber: 2,
+                    content: `
+                        <section class="lesson-section">
+                            
+                        </section>
+                    `
+                },
+                {
+                    pageNumber: 3,
+                    content: `
+                        <section class="lesson-section">
+                            
                         </section>
                     `
                 }
