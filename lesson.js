@@ -143,6 +143,14 @@ function renderLessonContent(lessonData, part, pageNumber) {
                 url: `?lesson=${getUrlParams().lessonId}&part=part${part.partNumber + 1}` 
             };
         }
+
+        if (part.partNumber === lessonData.totalParts) {
+            nextButtonData = {
+                text: "Finish",
+                disabled: false,
+                url: "index.html"
+            };
+        }
     }
     
     // Only display title and subtitle on the first page
