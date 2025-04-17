@@ -128,20 +128,27 @@ function renderLessonContent(lessonData, part, pageNumber) {
             };
         }
         
-        // Only allow navigation to page 2 maximum
-        if (pageNumber === 1 && part.pages.length > 1) {
-            // First page, can go to page 2 only
+        if (pageNumber < part.pages.length) {
+            // Not the last page in the part, go to next page
             nextButtonData = { 
                 text: "Next Page →", 
                 disabled: false, 
-                url: `?lesson=${getUrlParams().lessonId}&part=${part.id}&page=2` 
+                url: `?lesson=${getUrlParams().lessonId}&part=${part.id}&page=${pageNumber + 1}` 
             };
-        } else if (pageNumber === 2) {
-            // On page 2, go to next part
+        } else {
+            // On the last page, go to next part
             nextButtonData = { 
                 text: "Next Part →", 
                 disabled: false, 
                 url: `?lesson=${getUrlParams().lessonId}&part=part${part.partNumber + 1}` 
+            };
+        }
+
+        if (part.partNumber === lessonData.totalParts) {
+            nextButtonData = {
+                text: "Finish",
+                disabled: false,
+                url: "index.html"
             };
         }
     }
