@@ -1,7 +1,7 @@
 window.lesson_empathy_gap = {
     lessonNumber: "01",
     lessonTitle: "Empathy Gap",
-    totalParts: 4,
+    totalParts: 5,
     parts: [
         {
             id: "part1",
@@ -41,6 +41,7 @@ window.lesson_empathy_gap = {
         {
             id: "part2",
             title: "Part 2: Understanding Your Empathy Gap",
+            subtitle: " ",
             partNumber: 2,
             prevButton: { text: "← Part 1", disabled: false, url: "?lesson=empathy-gap&part=part1&page=2" },
             nextButton: { text: "Part 3 →", disabled: false, url: "?lesson=empathy-gap&part=part3" },
@@ -328,7 +329,65 @@ window.lesson_empathy_gap = {
                     pageNumber: 2,
                     content: `
                         <section class="lesson-section">
+                            <div id="diet-content" class="dynamic-content" data-option="diet" data-group="empathy-gap-question">
+                                <h3>Step 2: Practice State Simulation</h3>
+                                <p>Close your eyes and vividly imagine yourself at your most vulnerable eating moment:</p>
+                                <ul>
+                                    <li>Feel the fatigue after a long day</li>
+                                    <li>Sense the hunger or cravings</li>
+                                    <li>Notice the emotional state that typically triggers deviation</li>
+                                    <li>Experience the mental justifications ("just this once")</li>
+                                </ul>
+                                <p>From this imagined state, ask: "What would actually help me in this moment? What am I overlooking when I make my eating plans?"</p>
+                            </div>
                             
+                            <div id="exercise-content" class="dynamic-content" data-option="exercise" data-group="empathy-gap-question">
+                                <h3>Step 2: Practice State Simulation</h3>
+                                <p>Close your eyes and imagine yourself at your typical exercise decision point:</p>
+                                <ul>
+                                    <li>Feel the warmth of your bed when the alarm rings</li>
+                                    <li>Sense the mental and physical fatigue after work</li>
+                                    <li>Experience the competing priorities that arise</li>
+                                    <li>Notice the internal negotiation ("I'll definitely go tomorrow")</li>
+                                </ul>
+                                <p>From this state, ask: "What would make exercise possible in this moment? What barriers am I not accounting for in my planning?"</p>
+                            </div>
+                            
+                            <div id="projects-content" class="dynamic-content" data-option="projects" data-group="empathy-gap-question">
+                                <h3>Step 2: Practice State Simulation</h3>
+                                <p>Close your eyes and imagine yourself at your typical decision point:</p>
+                                <ul>
+                                    <li>Feel the mental fatigue after a workday</li>
+                                    <li>Sense the pull of easier activities (social media, TV)</li>
+                                    <li>Experience the resistance to starting something challenging</li>
+                                    <li>Notice how distant your initial excitement feels</li>
+                                </ul>
+                                <p>From this state, ask: "What would make creative work possible in this moment? What barriers am I not seeing when I create my ambitious plans?"</p>
+                            </div>
+                            
+                            <div id="saving-content" class="dynamic-content" data-option="saving" data-group="empathy-gap-question">
+                                <h3>Step 2: Practice State Simulation</h3>
+                                <p>Close your eyes and imagine yourself in a spending temptation moment:</p>
+                                <ul>
+                                    <li>Feel the emotional state that typically triggers spending</li>
+                                    <li>Sense the social pressure or opportunity to purchase</li>
+                                    <li>Experience the justifications that arise ("I deserve this," "It's on sale")</li>
+                                    <li>Notice how distant your financial goals feel in that moment</li>
+                                </ul>
+                                <p>From this state, ask: "What would help me maintain financial discipline? What am I not considering when I make my budgets?"</p>
+                            </div>
+                            
+                            <div id="sleep-content" class="dynamic-content" data-option="sleep" data-group="empathy-gap-question">
+                                <h3>Step 2: Practice State Simulation</h3>
+                                <p>Close your eyes and imagine yourself at your typical bedtime decision point:</p>
+                                <ul>
+                                    <li>Feel the engagement with whatever keeps you awake (shows, games, work)</li>
+                                    <li>Sense the resistance to ending enjoyable or productive activities</li>
+                                    <li>Experience the justifications ("I'll still get enough sleep")</li>
+                                    <li>Notice how the morning consequences feel distant and abstract</li>
+                                </ul>
+                                <p>From this state, ask: "What would make choosing sleep easier in this moment? What am I missing when I commit to early bedtimes?"</p>
+                            </div>
                         </section>
                     `
                 },
@@ -336,7 +395,65 @@ window.lesson_empathy_gap = {
                     pageNumber: 3,
                     content: `
                         <section class="lesson-section">
+                            <div id="diet-content" class="dynamic-content" data-option="diet" data-group="empathy-gap-question">
+                                <h3>Step 3: Create Environmental Supports</h3>
+                                <p>Design your environment to support future-you:</p>
+                                <ul>
+                                    <li>Prepare portion-controlled healthy snacks in advance</li>
+                                    <li>Create a "kitchen closed after 8 PM" rule</li>
+                                    <li>Schedule meal prep when you're motivated</li>
+                                    <li>Remove tempting foods from easily accessible places</li>
+                                    <li>Pre-commit to restaurant choices before arriving</li>
+                                </ul>
+                            </div>
                             
+                            <div id="exercise-content" class="dynamic-content" data-option="exercise" data-group="empathy-gap-question">
+                                <h3>Step 3: Create Environmental Supports</h3>
+                                <p>Design your environment to support your exercise intentions:</p>
+                                <ul>
+                                    <li>Sleep in workout clothes for morning exercise</li>
+                                    <li>Pack gym bags the night before</li>
+                                    <li>Schedule workouts with accountability partners</li>
+                                    <li>Create a minimum viable workout option (10 minutes) for low-energy days</li>
+                                    <li>Place workout equipment in visible, convenient locations</li>
+                                </ul>
+                            </div>
+                            
+                            <div id="projects-content" class="dynamic-content" data-option="projects" data-group="empathy-gap-question">
+                                <h3>Step 3: Create Environmental Supports</h3>
+                                <p>Design your environment to support your creative practice:</p>
+                                <ul>
+                                    <li>Schedule shorter, more frequent sessions (20-30 minutes)</li>
+                                    <li>Create a dedicated physical space that signals "creative time"</li>
+                                    <li>Develop a simple startup ritual that requires minimal energy</li>
+                                    <li>Break projects into the smallest possible next steps</li>
+                                    <li>Remove digital distractions during designated creative time</li>
+                                </ul>
+                            </div>
+                            
+                            <div id="saving-content" class="dynamic-content" data-option="saving" data-group="empathy-gap-question">
+                                <h3>Step 3: Create Environmental Supports</h3>
+                                <p>Design your environment to support financial discipline:</p>
+                                <ul>
+                                    <li>Set up automatic transfers to savings on payday</li>
+                                    <li>Implement a 24-hour rule for non-essential purchases</li>
+                                    <li>Use cash envelopes for discretionary spending categories</li>
+                                    <li>Delete shopping apps and saved payment information</li>
+                                    <li>Create specific "fun money" allocations that you can spend without guilt</li>
+                                </ul>
+                            </div>
+                            
+                            <div id="sleep-content" class="dynamic-content" data-option="sleep" data-group="empathy-gap-question">
+                                <h3>Step 3: Create Environmental Supports</h3>
+                                <p>Design your environment to support healthy sleep habits:</p>
+                                <ul>
+                                    <li>Set device downtime schedules or use apps that limit evening use</li>
+                                    <li>Create a bedtime alarm (not just a morning one)</li>
+                                    <li>Develop a relaxing pre-sleep ritual that signals transition</li>
+                                    <li>Keep devices out of the bedroom</li>
+                                    <li>Use automation to dim lights and reduce stimulation at set times</li>
+                                </ul>
+                            </div>
                         </section>
                     `
                 }
@@ -345,6 +462,7 @@ window.lesson_empathy_gap = {
         {
             id: "part5",
             title: "Part 5: Summary - Key Takeaways",
+            subtitle: " ",
             partNumber: 5,
             prevButton: { text: "← Back", disabled: false, url: "?lesson=empathy-gap&part=part4" },
             nextButton: { text: "Finish", disabled: false, url: "index.html#courses" },
